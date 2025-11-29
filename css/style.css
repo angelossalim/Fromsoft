@@ -1,0 +1,497 @@
+/* ===== Reset and Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #000;
+  padding: 20px 50px;
+  border-bottom: 2px solid #111;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo img {
+  width: 50px;
+  height: auto;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.logo:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+}
+
+.logo h1 {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.logo:hover h1 {
+  color: #fcd703;
+}
+
+/* ===== Navigation ===== */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: #fcd703;
+}
+
+/* ===== Search Bar ===== */
+/* Adjusted styles to make the search icon larger and align nicely */
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #111;
+  border-radius: 8px;
+  padding: 6px 12px; /* slightly larger padding to give room for bigger icon */
+  gap: 8px;
+  min-width: 220px;
+}
+
+/* Let the input flex to fill available space; keep padding for comfortable typing */
+.search-box input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 8px 6px;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+/* Make the button area comfortable for touch and center the icon */
+.search-box button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0; /* ensure no extra height from line-height */
+}
+
+/* Increase icon size so it fits perfectly in the search box */
+.search-box img {
+  width: 20px;   /* increased from 18px */
+  height: 20px;  /* keep square */
+  display: block;
+  filter: invert(1);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.btn {
+  background-color: #fcd703;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffe347;
+}
+
+/* ===== Games Section ===== */
+.games {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.games h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.game {
+  background-color: #111;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.game img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.game h3 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.game p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* ===== About Section ===== */
+.about {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.about h2,
+.about h3 {
+  color: #fcd703;
+  margin-bottom: 10px;
+}
+
+.about ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.game-banner {
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+/* ===== Individual Game Pages ===== */
+.game-page {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.game-page h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.game-img {
+  width: 100%;
+  max-width: 1200px;
+  max-height: 80vh;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto 30px auto;
+}
+
+/* Video wrapper for embedded trailers */
+.video-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+  display: block;
+  border: none;
+}
+
+/* ===== Join Section ===== */
+.join-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.join-section h2 {
+  color: #fcd703;
+  margin-bottom: 10px;
+}
+
+.join-form {
+  margin-top: 20px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+
+.join-form label {
+  display: block;
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form select,
+.join-form textarea {
+  background: #0f0f0f;
+  border: 1px solid #222;
+  padding: 10px;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.join-form .checkbox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #ddd;
+}
+
+.join-form .btn {
+  width: max-content;
+  margin-top: 6px;
+}
+
+/* success message */
+.success-message {
+  color: #b7ff9d;
+  margin-top: 10px;
+}
+
+/* ===== Contact Section ===== */
+.contact-section {
+  max-width: 920px;
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-cards {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+contact-card {
+  /* placeholder in case of element reference */
+}
+
+.contact-card {
+  background: #0f0f0f;
+  padding: 18px;
+  border-radius: 10px;
+  width: 260px;
+  text-align: center;
+  border: 1px solid #1a1a1a;
+}
+
+.contact-card .icon {
+  margin-bottom: 10px;
+}
+
+.contact-card h3 {
+  color: #fcd703;
+  margin-bottom: 6px;
+}
+
+.contact-card a {
+  color: #fff;
+  text-decoration: none;
+}
+.contact-card a:hover {
+  color: #ffe347;
+}
+
+/* ===== Important Figures Section ===== */
+.figures-section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+.figures-section h2 {
+  text-align: center;
+  color: #fcd703;
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+}
+
+/* Grid layout for person cards */
+.figure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+/* Individual card */
+.figure-card {
+  background: #0f0f0f;
+  border: 1px solid #1a1a1a;
+  padding: 18px;
+  border-radius: 10px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.figure-card h3 {
+  color: #fcd703;
+  margin-bottom: 8px;
+}
+
+.figure-role {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.figure-desc {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 18px 10px;
+  background-color: #000;
+  color: #888;
+  font-size: 0.9rem;
+  border-top: 1px solid #111;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 10px;
+  background: #111;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.social-links a:hover {
+  background: #222;
+  color: #fcd703;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .hero img {
+    height: 60vh;
+  }
+
+  .game-list {
+    flex-direction: column;
+  }
+
+  .game-img {
+    max-height: 50vh;
+  }
+
+  .video-wrapper iframe {
+    height: 250px;
+  }
+
+  .contact-cards {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-box img {
+    width: 18px;
+    height: 18px;
+  }
+}
